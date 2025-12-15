@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>
+			Homepage
+		</title>
+		
+		<script> 
+		let currentMode = 'light'; 
+		</script>
+		
+	</head>
+	<body style='background-color:white' id='BBG'>
+		<h1>
+		Home Page
+		</h1>
+		<h2>
+		Online Safety
+		</h2>
+		<p>
+			Hello! Welcome to my website.<br> This is the Homepage of this project
+		</p>
+		<footer style='background-color:grey'>
+		<a href = "About.html">About<br></a>
+		<button type="button" onclick="DarkLightMode()" id="DarkLightMode">Dark mode</button>
+		
+		<script>
+		function DarkLightMode() {
+			const modeButton = document.getElementById("DarkLightMode");
+			
+			if (currentMode === 'light') {
+				// Switch to dark mode
+				document.body.style.backgroundColor = "black";
+				document.body.style.color = "white";
+				modeButton.textContent = "Light mode";
+				currentMode = 'dark';
+			} else {
+				document.body.style.backgroundColor = "white";
+				document.body.style.color = "black";
+				modeButton.textContent = "Dark mode";
+				currentMode = 'light';
+			}
+		}
+		</script>
+		</footer>
+	</body>
+</html>
